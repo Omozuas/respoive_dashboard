@@ -25,14 +25,11 @@ class MyApp extends StatelessWidget {
             .apply(bodyColor: Colors.black),
         canvasColor: secondaryColor,
       ),
-      home: MultiProvider(
-        providers: [
-          ChangeNotifierProvider(
-            create: (context) => MenuAppController(),
-          ),
-        ],
-        child: const MainScreen(),
-      ),
+      home: MultiProvider(providers: [
+        ChangeNotifierProvider(
+          create: (context) => MenuAppController(),
+        ),
+      ], child: const MainScreen()),
     );
   }
 }
